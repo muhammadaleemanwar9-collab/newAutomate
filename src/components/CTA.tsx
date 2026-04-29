@@ -45,9 +45,9 @@ export default function CTA() {
         <div className="bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-3xl p-8 md:p-12 shadow-xl">
           {submitted ? (
             <div className="text-center py-8 animate-fade-in">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-emerald-100 dark:bg-emerald-950/50 rounded-full mb-4">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-100 dark:bg-primary-950/50 rounded-full mb-4">
                 <svg
-                  className="w-8 h-8 text-emerald-600 dark:text-emerald-400"
+                  className="w-8 h-8 text-primary-600 dark:text-primary-400"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >

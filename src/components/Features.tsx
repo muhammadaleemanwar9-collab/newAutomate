@@ -33,7 +33,7 @@ export default function Features() {
       description:
         "Comprehensive analytics to understand customer sentiment, track response rates, and identify opportunities for business growth.",
       icon: "📊",
-      gradient: "from-emerald-500 to-teal-500",
+      gradient: "from-primary-500 to-teal-500",
     },
     {
       title: "Scalable Infrastructure",
