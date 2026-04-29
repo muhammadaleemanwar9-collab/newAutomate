@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 
@@ -9,13 +9,17 @@ export const metadata: Metadata = {
   keywords:
     "automation, business growth, AI automation, customer service, business automation",
   authors: [{ name: "Automate Team" }],
-  viewport: "width=device-width, initial-scale=1",
   robots: "index, follow",
   openGraph: {
     title: "Automate - Grow Your Business with AI",
     description: "Transform your business profile with intelligent automation.",
     type: "website",
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
