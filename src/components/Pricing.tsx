@@ -1,140 +1,135 @@
 export default function Pricing() {
   const plans = [
     {
-      name: "Silver",
-      price: "$29",
-      period: "/month",
+      name: "BASIC",
+      price: "$9.99",
       description: "Perfect for small businesses starting their journey",
       features: [
-        "Up to 100 customer inquiries/month",
-        "Basic response automation",
-        "Email & chat support",
-        "Weekly analytics reports",
-        "Standard onboarding",
+        { text: "Lorem ipsum dolor sit amet", included: true },
+        { text: "Consectetur adipiscing elit", included: true },
+        { text: "Sed diam nonummy", included: true },
+        { text: "Et eos modo ad posidonium", included: false },
+        { text: "Eum cu tantas legere", included: false },
+        { text: "Eius scripta intellegat", included: false },
       ],
-      cta: "Start with Silver",
-      highlighted: false,
+      gradient: "from-cyan-400 to-cyan-500",
+      buttonColor: "bg-cyan-400 hover:bg-cyan-500",
     },
     {
-      name: "Gold",
-      price: "$79",
-      period: "/month",
+      name: "BUSINESS",
+      price: "$21.99",
       description: "Ideal for growing businesses with moderate volume",
       features: [
-        "Up to 1,000 customer inquiries/month",
-        "Advanced response automation",
-        "Multi-channel support",
-        "Real-time analytics dashboard",
-        "Priority support",
-        "Custom templates",
-        "Sentiment analysis",
+        { text: "Lorem ipsum dolor sit amet", included: true },
+        { text: "Consectetur adipiscing elit", included: true },
+        { text: "Sed diam nonummy", included: true },
+        { text: "Et eos modo ad posidonium", included: true },
+        { text: "Eum cu tantas legere", included: false },
+        { text: "Eius scripta intellegat", included: false },
       ],
-      cta: "Go with Gold",
-      highlighted: true,
+      gradient: "from-purple-400 to-purple-500",
+      buttonColor: "bg-purple-400 hover:bg-purple-500",
     },
     {
-      name: "Diamond",
-      price: "$199",
-      period: "/month",
+      name: "PREMIUM",
+      price: "$41.99",
       description: "Enterprise solution for high-volume operations",
       features: [
-        "Unlimited customer inquiries",
-        "Premium AI-powered responses",
-        "All channels included",
-        "Advanced analytics & reporting",
-        "24/7 dedicated support",
-        "Custom integrations",
-        "Advanced sentiment analysis",
-        "Team collaboration tools",
-        "API access",
+        { text: "Lorem ipsum dolor sit amet", included: true },
+        { text: "Consectetur adipiscing elit", included: true },
+        { text: "Sed diam nonummy", included: true },
+        { text: "Et eos modo ad posidonium", included: true },
+        { text: "Eum cu tantas legere", included: true },
+        { text: "Eius scripta intellegat", included: true },
       ],
-      cta: "Enterprise Growth",
-      highlighted: false,
+      gradient: "from-pink-400 to-pink-500",
+      buttonColor: "bg-pink-400 hover:bg-pink-500",
     },
   ];
 
   return (
     <section
       id="pricing"
-      className="w-full py-24 bg-white dark:bg-neutral-900 transition-colors duration-300"
+      className="w-full py-24 bg-gradient-to-b from-neutral-100 to-white dark:from-neutral-950 dark:to-neutral-900 transition-colors duration-300"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <h2 className="section-title">Simple, Transparent Pricing</h2>
+          <h2 className="section-title">PRICING TABLE DESIGN</h2>
           <p className="section-subtitle">
             Choose the plan that fits your business needs
           </p>
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`relative rounded-3xl transition-all duration-300 ${
-                plan.highlighted
-                  ? "md:scale-105 bg-gradient-to-br from-primary-50 to-primary-50 dark:from-primary-950/50 dark:to-primary-950/50 border-2 border-primary-500 dark:border-primary-400 shadow-2xl"
-                  : "bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 hover:border-primary-300 dark:hover:border-primary-700 hover:shadow-xl"
-              }`}
+              className="relative bg-white dark:bg-neutral-800/50 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-300 overflow-hidden group hover:-translate-y-2"
             >
-              {plan.highlighted && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-gradient-to-r from-primary-600 to-primary-600 dark:from-primary-500 dark:to-primary-500 text-white px-4 py-1.5 rounded-full text-sm font-semibold shadow-lg">
-                    Most Popular
-                  </span>
+              {/* Gradient Header */}
+              <div
+                className={`h-32 bg-gradient-to-br ${plan.gradient} relative`}
+              >
+                <div className="absolute top-4 left-6">
+                  <h3 className="text-white text-lg font-bold tracking-wider">
+                    {plan.name}
+                  </h3>
                 </div>
-              )}
-
-              <div className="p-8">
-                {/* Plan Name */}
-                <h3 className="text-2xl font-bold text-neutral-900 dark:text-neutral-50 mb-2">
-                  {plan.name}
-                </h3>
-                <p className="text-neutral-600 dark:text-neutral-400 text-sm mb-6">
-                  {plan.description}
-                </p>
-
-                {/* Price */}
-                <div className="mb-8">
-                  <span className="text-5xl font-bold bg-gradient-to-r from-primary-600 to-primary-600 dark:from-primary-400 dark:to-primary-400 bg-clip-text text-transparent">
+                <div className="absolute -bottom-8 left-6 bg-white dark:bg-neutral-800 rounded-2xl px-6 py-3 shadow-lg">
+                  <span className="text-3xl font-bold text-neutral-800 dark:text-neutral-100">
                     {plan.price}
                   </span>
-                  <span className="text-neutral-600 dark:text-neutral-400 ml-2">
-                    {plan.period}
-                  </span>
                 </div>
+              </div>
 
-                {/* CTA Button */}
-                <button
-                  className={`w-full mb-8 py-3 rounded-xl font-semibold transition-all duration-300 ${
-                    plan.highlighted ? "btn-primary" : "btn-secondary"
-                  }`}
-                >
-                  {plan.cta}
-                </button>
-
+              {/* Card Body */}
+              <div className="pt-16 pb-8 px-6">
                 {/* Features List */}
-                <div className="space-y-4">
+                <div className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-start gap-3">
-                      <svg
-                        className="w-5 h-5 text-primary-600 dark:text-primary-400 flex-shrink-0 mt-0.5"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
+                    <div key={featureIndex} className="flex items-center gap-3">
+                      {feature.included ? (
+                        <svg
+                          className="w-5 h-5 text-green-500 flex-shrink-0"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                      ) : (
+                        <svg
+                          className="w-5 h-5 text-red-500 flex-shrink-0"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                      )}
+                      <span
+                        className={`text-sm ${feature.included ? "text-neutral-700 dark:text-neutral-300" : "text-neutral-400 dark:text-neutral-500 line-through"}`}
                       >
-                        <path
-                          fillRule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                        {feature}
+                        {feature.text}
                       </span>
                     </div>
                   ))}
                 </div>
+
+                {/* CTA Button */}
+                <button
+                  className={`w-full py-3 rounded-full text-white font-semibold transition-all duration-300 shadow-lg hover:shadow-xl ${plan.buttonColor}`}
+                >
+                  Get Started
+                </button>
               </div>
             </div>
           ))}

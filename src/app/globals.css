@@ -30,7 +30,7 @@
   }
 
   .btn-accent {
-    @apply px-6 py-3 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 
+    @apply px-6 py-3 bg-gradient-to-r from-purple-400 to-purple-500 hover:from-purple-500 hover:to-purple-600 
     text-white rounded-xl font-medium transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105;
   }
 

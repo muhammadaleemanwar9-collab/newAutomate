@@ -5,42 +5,42 @@ export default function Features() {
       description:
         "Intelligently respond to all customer feedback. When negative feedback arrives, we respectfully apologize, understand concerns, and request opportunities to improve.",
       icon: "💬",
-      gradient: "from-primary-500 to-purple-500",
+      gradient: "from-cyan-400 to-cyan-500",
     },
     {
       title: "Reputation Building",
       description:
         "Automatically encourage satisfied customers to share their positive experiences. Build authentic reviews that reflect your commitment to excellence.",
       icon: "⭐",
-      gradient: "from-amber-500 to-orange-500",
+      gradient: "from-purple-400 to-purple-500",
     },
     {
       title: "24/7 Availability",
       description:
         "Your business never sleeps. Our automation ensures every customer inquiry is acknowledged and addressed promptly, even outside business hours.",
       icon: "🌙",
-      gradient: "from-primary-500 to-blue-500",
+      gradient: "from-pink-400 to-pink-500",
     },
     {
       title: "Multi-Channel Support",
       description:
         "Manage inquiries across all platforms from a single dashboard. Unify your communication strategy across email, chat, and social media.",
       icon: "📱",
-      gradient: "from-pink-500 to-rose-500",
+      gradient: "from-cyan-400 to-cyan-500",
     },
     {
       title: "Analytics & Insights",
       description:
         "Comprehensive analytics to understand customer sentiment, track response rates, and identify opportunities for business growth.",
       icon: "📊",
-      gradient: "from-primary-500 to-teal-500",
+      gradient: "from-purple-400 to-purple-500",
     },
     {
       title: "Scalable Infrastructure",
       description:
         "Built for growth. Our infrastructure scales seamlessly with your business, handling increased volume without performance degradation.",
       icon: "🚀",
-      gradient: "from-cyan-500 to-sky-500",
+      gradient: "from-pink-400 to-pink-500",
     },
   ];
 
